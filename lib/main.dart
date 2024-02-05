@@ -42,10 +42,14 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: [
-          Column(children: [
-            TextField(),
-            ElevatedButton(onPressed: () {}, child: Text('Add'))
-          ]),
+          Column(
+            children: todo_tasks.map((e) => Text(e)).toList(),
+          ),
+          TextField(),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Add'),
+          ),
         ],
       ),
     );
